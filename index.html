@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dmsqls0219-dot's Blog</title>
+  <meta name="description" content="개발 블로그">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1 class="site-title"><a href="/">dmsqls0219-dot</a></h1>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="search-section">
+      <input 
+        type="text" 
+        id="search-input" 
+        class="search-input" 
+        placeholder="검색..."
+        aria-label="Search posts"
+      >
+    </section>
+
+    <section class="filter-section">
+      <div class="filter-buttons" id="tag-filter">
+        <button class="filter-btn active" data-tag="all">All</button>
+      </div>
+    </section>
+
+    <section class="posts-section">
+      <div id="posts-container" class="posts-grid">
+        <!-- 게시글 목록이 동적으로 추가됩니다 -->
+      </div>
+      <div id="no-results" class="no-results" style="display: none;">
+        <p>검색 결과가 없습니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 dmsqls0219-dot. Built with vanilla JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+

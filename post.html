@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading... | dmsqls0219-dot's Blog</title>
+  <meta name="description" content="게시글">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1 class="site-title"><a href="/">dmsqls0219-dot</a></h1>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="post-article">
+      <div class="post-loading" id="post-loading">
+        <p>로딩 중...</p>
+      </div>
+      
+      <div class="post-error" id="post-error" style="display: none;">
+        <h2>게시글을 불러올 수 없습니다</h2>
+        <p>요청하신 게시글을 찾을 수 없습니다.</p>
+        <a href="/" class="btn">홈으로 돌아가기</a>
+      </div>
+
+      <div id="post-content" style="display: none;">
+        <header class="post-header">
+          <h1 id="post-title" class="post-title"></h1>
+          <div class="post-meta">
+            <time id="post-date" class="post-date"></time>
+            <span id="post-category" class="post-category"></span>
+          </div>
+          <div id="post-tags" class="post-tags"></div>
+        </header>
+
+        <div id="post-body" class="post-body">
+          <!-- 마크다운 내용이 여기에 렌더링됩니다 -->
+        </div>
+
+        <nav class="post-nav">
+          <a href="/" class="btn">← 목록으로</a>
+        </nav>
+
+        <section class="comments-section">
+          <h2>댓글</h2>
+          <div id="giscus-container"></div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 dmsqls0219-dot. Built with vanilla JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/post-loader.js"></script>
+</body>
+</html>
+

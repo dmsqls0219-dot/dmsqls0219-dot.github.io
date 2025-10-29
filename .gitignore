@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Note: posts.json은 Git에 포함되어야 합니다 (GitHub Actions가 생성)
+
