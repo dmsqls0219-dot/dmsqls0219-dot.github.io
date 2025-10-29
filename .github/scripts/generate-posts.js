@@ -17,7 +17,10 @@ const files = fs
 
 const posts = files.map((filename) => {
   const filePath = path.join(postsDir, filename);
-  const content = fs.readFileSync(filePath, 'utf8');
+  let content = fs.readFileSync(filePath, 'utf8');
+  
+  // Windows CRLF를 LF로 통일
+  content = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
 
   // Front Matter 파싱
   const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);

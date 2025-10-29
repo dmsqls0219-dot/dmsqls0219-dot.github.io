@@ -15,7 +15,10 @@
         throw new Error('Post not found');
       }
 
-      const markdown = await response.text();
+      let markdown = await response.text();
+      // Windows CRLF를 LF로 통일
+      markdown = markdown.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+      
       const { frontMatter, content } = parseFrontMatter(markdown);
       
       renderPost(frontMatter, content);
