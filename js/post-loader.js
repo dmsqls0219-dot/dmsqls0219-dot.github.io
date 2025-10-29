@@ -146,9 +146,7 @@
 
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
-    
-    // Giscus 설정
-    // https://giscus.app/ko 에서 설정 정보를 가져와 아래 값을 업데이트하세요
+
     script.setAttribute('data-repo', 'dmsqls0219-dot/dmsqls0219-dot.github.io');
     script.setAttribute('data-repo-id', 'R_kgDOQLJBcw'); // 3단계에서 복사한 Repo ID로 교체
     script.setAttribute('data-category', 'General');
